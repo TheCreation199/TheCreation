@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
 
     --ntbgcolort: black;
@@ -41,12 +48,33 @@ top: 5%;
 left: 50%;
 transform: translate(-50%,-50%);*/
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
     white-space: nowrap;
 
+}
+
+@-webkit-keyframes thc {
+    0% {
+
+        color: var(--tbgcolort);
+    }
+
+    100% {
+
+        color: var(--ntbgcolort);
+
+    }
 }
 
 @keyframes thc {
@@ -58,6 +86,19 @@ transform: translate(-50%,-50%);*/
     100% {
 
         color: var(--ntbgcolort);
+
+    }
+}
+
+@-webkit-keyframes nthc {
+    0% {
+
+        color: var(--ntbgcolort);
+    }
+
+    100% {
+
+        color: var(--tbgcolort);
 
     }
 }
@@ -85,13 +126,16 @@ transform: translate(-50%,-50%);*/
 }
 
 .text:not(:hover) {
-    animation: nthc 0.5s forwards;
+    -webkit-animation: nthc 0.5s forwards;
+            animation: nthc 0.5s forwards;
 
 }
 
 .text:hover {
 
-    animation: thc 0.5s forwards;
+    -webkit-animation: thc 0.5s forwards;
+
+            animation: thc 0.5s forwards;
 
 
 
@@ -109,15 +153,23 @@ transform: translate(-50%,-50%);*/
     width: 100%;
     height: 10vh;
     background-color: #008080;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .text {
 
     margin: 0%;
     padding: 0%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     position: relative;
 
@@ -228,10 +280,16 @@ transform: translate(-50%,-50%);*/
 #sec1 {
     background: #001220;
     width: 100%;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: auto 20px auto;
     grid-template-rows: auto auto;
 
-    column-gap: 20px;
+    -webkit-column-gap: 20px;
+
+       -moz-column-gap: 20px;
+
+            column-gap: 20px;
     row-gap: 20px;
     overflow: hidden;
 
@@ -275,7 +333,8 @@ transform: translate(-50%,-50%);*/
     background: #001220;
     width: auto;
     overflow: hidden;
-    box-shadow: 5px 5px 5px #1f1f1f;
+    -webkit-box-shadow: 5px 5px 5px #1f1f1f;
+            box-shadow: 5px 5px 5px #1f1f1f;
     height: 30px;
 
 }
@@ -288,6 +347,8 @@ transform: translate(-50%,-50%);*/
 }
 
 ::-webkit-scrollbar-track {
+
+    background: -webkit-gradient(linear, left top, left bottom, from(#008080), to(#f4d884));
 
     background: linear-gradient(#008080, #f4d884);
 
@@ -304,8 +365,13 @@ transform: translate(-50%,-50%);*/
 
     background-image: 0;
     display: flexbox;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 20px;
+    -webkit-transition: opacity 0.5;
+    -o-transition: opacity 0.5;
     transition: opacity 0.5;
     overflow: hidden;
 
@@ -314,16 +380,24 @@ transform: translate(-50%,-50%);*/
     background-position: center;
     background-size: cover;
 
-    box-shadow: 5px 0px 5px black;
+    -webkit-box-shadow: 5px 0px 5px black;
+
+            box-shadow: 5px 0px 5px black;
 
     border-radius: 20px;
 
 }
 
 #spul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
 }
 
@@ -338,6 +412,7 @@ transform: translate(-50%,-50%);*/
 .but {
     width: 50px;
     height: 80px;
+    background: -o-linear-gradient(315deg, rgb(225, 225, 225, 0.1), rgb(225, 225, 225, 0));
     background: linear-gradient(135deg, rgb(225, 225, 225, 0.1), rgb(225, 225, 225, 0));
     backdrop-filter: blur;
     -webkit-backdrop-filter: blur(10px);
@@ -351,7 +426,32 @@ transform: translate(-50%,-50%);*/
 .hidden {
     opacity: 0;
     background: transparent;
-    animation: abc 0.5 forwards;
+    -webkit-animation: abc 0.5 forwards;
+            animation: abc 0.5 forwards;
+}
+
+@-webkit-keyframes abc {
+
+    0% {}
+
+
+    50% {
+
+        background: transparent;
+    }
+
+
+    100% {
+
+
+        background: none;
+
+
+
+
+
+
+    }
 }
 
 @keyframes abc {

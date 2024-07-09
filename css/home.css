@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .gv {
     font-family: gv;
     font-size: x-large;
@@ -9,7 +16,8 @@
     background: #001220;
     width: auto;
     overflow: hidden;
-    box-shadow: 5px 5px 5px #1f1f1f;
+    -webkit-box-shadow: 5px 5px 5px #1f1f1f;
+            box-shadow: 5px 5px 5px #1f1f1f;
     height: 30px;
 
 }
@@ -18,6 +26,8 @@
 
     margin: 0%;
     padding: 0%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     position: relative;
 
@@ -33,10 +43,17 @@
     width: 100%;
     height: 10vh;
     background-color: #008080;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-   box-shadow: 5px 5px 5px black;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+   -webkit-box-shadow: 5px 5px 5px black;
+           box-shadow: 5px 5px 5px black;
    z-index: 500;
 
 }
@@ -56,9 +73,17 @@ top: 5%;
 left: 50%;
 transform: translate(-50%,-50%);*/
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
 white-space: nowrap;
 }
@@ -93,6 +118,19 @@ html {
     --tbgcolort: white;
 }
 
+@-webkit-keyframes thc {
+    0% {
+
+        color: var(--tbgcolort);
+    }
+
+    100% {
+
+        color: var(--ntbgcolort);
+
+    }
+}
+
 @keyframes thc {
     0% {
 
@@ -102,6 +140,19 @@ html {
     100% {
 
         color: var(--ntbgcolort);
+
+    }
+}
+
+@-webkit-keyframes nthc {
+    0% {
+
+        color: var(--ntbgcolort);
+    }
+
+    100% {
+
+        color: var(--tbgcolort);
 
     }
 }
@@ -120,13 +171,16 @@ html {
 }
 
 .text:not(:hover) {
-    animation: nthc 0.5s forwards;
+    -webkit-animation: nthc 0.5s forwards;
+            animation: nthc 0.5s forwards;
 
 }
 
 .text:hover {
 
-    animation: thc 0.5s forwards;
+    -webkit-animation: thc 0.5s forwards;
+
+            animation: thc 0.5s forwards;
 
 
 
@@ -238,6 +292,8 @@ html {
 
 ::-webkit-scrollbar-track {
 
+    background: -webkit-gradient(linear, left top, left bottom, from(#008080), to(#f4d884));
+
     background: linear-gradient(#008080, #f4d884);
 
 
@@ -253,8 +309,13 @@ html {
   width: 100%;
   height: 100%;
 display: flexbox;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 20px;
+    -webkit-transition: opacity 0.5;
+    -o-transition: opacity 0.5;
     transition: opacity 0.5;
     overflow: hidden;
 
@@ -275,12 +336,15 @@ display: flexbox;
 
     width: 300px;
     height: 300px;
+    background: -o-linear-gradient(315deg, rgb(225, 225, 225, 0.1), rgb(225, 225, 225, 0));
     background: linear-gradient(135deg, rgb(225, 225, 225, 0.1), rgb(225, 225, 225, 0));
     backdrop-filter: blur;
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgb(225, 225, 225, 0);
     text-align: center;
-    transform: translate(10px,40px);
+    -webkit-transform: translate(10px,40px);
+        -ms-transform: translate(10px,40px);
+            transform: translate(10px,40px);
 
 }
