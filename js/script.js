@@ -39,24 +39,36 @@ window.onload = e => {
 }
 
 bleft.addEventListener("click", e => {
-
+    img1.classList.remove("hidden2");
+    img1.classList.add("hidden");
     ci--;
-  img1.style.animation="abc 0.5 forwards"
     img1.style.backgroundImage = obj[a + ci];
+   
+    setTimeout(function () {
+
+        img1.classList.remove("hidden");
+        img1.classList.add("hidden2");
+
+    
 
 
-
+    },250)
 
 })
 
 
 
 bright.addEventListener("click", e => {
-
-
-
+    img1.classList.remove("hidden2");
+    img1.classList.add("hidden");
     ci++;
     img1.style.backgroundImage = obj[a + ci];
+
+    setTimeout(function () {
+        img1.classList.remove("hidden");
+        img1.classList.add("hidden2");
+    },250)
+    
 
 
 });
@@ -72,6 +84,10 @@ function color(id) {
     aid.style.webkitTextFillColor = "transparent";
 
 }
+
+
+
+
 
 
 
