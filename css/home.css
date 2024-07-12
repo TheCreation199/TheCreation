@@ -337,12 +337,12 @@ display: flexbox;
     width: 300px;
     height: 300px;
     border-radius: 20px;
-    text-align: center;
+
     -webkit-transform: translate(10px,40px);
         -ms-transform: translate(10px,40px);
             transform: translate(10px,40px);
 
-
+overflow: hidden;
 }
 .glass{
 
@@ -357,4 +357,39 @@ background: rgba(255, 255, 255, 0.7);
 
 
 
+}
+.content{
+text-align: left;
+color:lavender;
+white-space:normal;
+overflow: hidden;
+}
+.heading{
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+white-space: nowrap;
+}
+@media (max-width:500px){
+
+    .textbox{
+
+
+        width: 150px;
+        height: 150px;
+    }
+}
+@media (max-width:300px){
+
+    .textbox{
+
+
+        width: 100px;
+        height: 100px;
+    }
 }
