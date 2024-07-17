@@ -283,9 +283,9 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
-
-
+    width: 8px;
+height:20px
+ 
 
 }
 
@@ -303,6 +303,7 @@ html {
     border-radius: 40in;
 
 }
+
 #inhr{
     display: -webkit-box;
     display: -ms-flexbox;

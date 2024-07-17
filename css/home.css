@@ -284,9 +284,9 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
-
-
+    width: 8px;
+height:20px
+ 
 
 }
 
@@ -304,6 +304,7 @@ html {
     border-radius: 40in;
 
 }
+
 #intro{
     background-image: url(../img/4.png);
   width: 100%;
