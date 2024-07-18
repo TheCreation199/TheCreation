@@ -5,7 +5,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     let formData = new FormData(this);
     
     // Send formData to Google Apps Script function for processing
-    fetch('https://script.google.com/macros/s/AKfycbxIWJO4lH3Too8uJ3nyRlb7Dx9gK6m0bTjRbSohAmMesaAIZ263FG5aRWpUz0g9M1KMyw/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbyQr8KYM1b3CNgaIDOEdgoj9x8ponmUdlAR8fDM7lUILgMUGaL_kqV4e5hkx-uZS1bonA/exec', {
         method: 'POST',
         body: formData
     })
