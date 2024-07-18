@@ -19,3 +19,4 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
         // Handle errors, e.g., display an error message to the user
     });
 });
+console.log("x12")
