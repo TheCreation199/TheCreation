@@ -7,14 +7,15 @@
 </head>
 <body>
     
-    <form id="holder">
-    <input type="text" id="naming" name="name" autocomplete="off" required>
-    <textarea  id="input" type="text" name="content" autocomplete="off" ></textarea>
-  <input type="date" id="date" name="date" autocomplete="off" required>
-  <input type="file" id="file" name="file" autocomplete="off" required>
-    </form>
-    <button id="submit">submit</button>
-
+<form id="myForm" enctype="multipart/form-data">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone" required><br><br>
+    <label for="image">Image:</label>
+    <input type="file" id="image" name="image" accept="image/*" required><br><br>
+    <button type="submit">Submit</button>
+</form>
     <script src="../js/databse.js"></script>
 </body>
 </html>
