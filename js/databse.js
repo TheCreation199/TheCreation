@@ -5,7 +5,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     let formData = new FormData(this);
     
     // Send formData to Google Apps Script function for processing
-    fetch('https://script.google.com/macros/s/AKfycbyQr8KYM1b3CNgaIDOEdgoj9x8ponmUdlAR8fDM7lUILgMUGaL_kqV4e5hkx-uZS1bonA/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbwNT9DY9lCoiVwhIp4TA94ewIbRBGOs5Xnmql9vQySd8XIZVxSXEr0f8h6UcV2U0wv1/exec', {
         method: 'POST',
         body: formData
     })
@@ -19,4 +19,4 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
         // Handle errors, e.g., display an error message to the user
     });
 });
-console.log("x12")
+console.log("x13")
