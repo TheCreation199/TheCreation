@@ -15,8 +15,8 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
         // Optionally, display a success message to the user
     })
     .catch((error) => {
-        console.error('Error:', error);
+        console.log('Error:', error);
         // Handle errors, e.g., display an error message to the user
     });
 });
-console.log("x15")
+console.log("x16")
