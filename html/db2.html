@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database</title>
+</head>
+<body>
+    
+<button id="button">get</button>
+
+
+
+<div id="div"></div>
+
+<script>
+
+    var a = 'a1'
+        var options = {
+            "async": true,
+            "crossDomain": true,
+            'mode':'no-cors',
+            "method": 'POST',
+            'body': a,
+            "headers": {
+                'Content-Type': 'text/plain;charset=utf-8'
+
+            },
+            "redirect": 'follow',
+
+        };
+
+
+
+document.getElementById("button").addEventListener('click',function(event){
+    event.preventDefault
+    
+fetch("https://script.google.com/macros/s/AKfycbzUpSSqIXgvwf8FRfzMf3-r7dyg_oxvMzhP7FQvxdA/dev",options)
+// .then(res => console.log("res "+res.json))
+// .then(data => console.log("data "+data))
+
+
+})
+function dopost(e){
+
+
+
+
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database</title>
+
+</head>
+
+<body>
+
+
+    <div id="div">
+
+
+
+
+    </div>
+    <input type="button" value="hello" id="button">
+
+
+    <style>
+        #div {
+            width: 400px;
+            height: 400px;
+            margin: 40px;
+            background-color: gold;
+        }
+    </style>
+    <script>
+        const div = document.getElementById("div");
+
+
+        var options = {
+            "async": true,
+            "crossDomain": true,
+            "method": 'GET',
+            "headers": {
+                'Content-Type': 'text/plain;charset=utf-8'
+
+            },
+            "redirect": 'follow',
+
+        };
+
+
+        document.getElementById("button").addEventListener("click", function (event) {
+            event.preventDefault
+
+            fetch('https://script.google.com/macros/s/AKfycbzUpSSqIXgvwf8FRfzMf3-r7dyg_oxvMzhP7FQvxdA/dev', options)
+                .then(response => response.json())
+
+
+
+                .then(data =>{
+console.log("success", data)
+div.style.backgroundColor=(data.content)
+div.textContent =data.content
+
+
+
+                })
+
+
+
+
+
+
+
+
+
+
+
+                .catch((error) => {
+
+
+                    console.log("error", error)
+
+
+                })
+
+
+        })
+
+        /*
+        
+        fetch("https://script.google.com/macros/s/AKfycbwNT9DY9lCoiVwhIp4TA94ewIbRBGOs5Xnmql9vQySd8XIZVxSXEr0f8h6UcV2U0wv1/exec", options)
+        .then(data =>{
+        
+        console.log("dat",data);
+        
+        
+        })
+        .then(response =>{
+        console.log("rep",response);
+        console.log()
+        
+        
+        })
+        .catch((error) => {
+            
+        
+        console.log("error", error)
+        
+        
+        })
+        
+        */
+
+    </script>
+</body>
+
+</html>
+var options = {
+    body: 'formdata',
+    //"async": 'true',
+    //"crossDomain": 'false',
+    method: 'POST',
+    headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+
+    },
+   redirect: 'follow',
+
+};

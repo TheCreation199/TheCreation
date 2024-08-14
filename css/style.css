@@ -26,7 +26,7 @@ html {
     height: 100%;
     width: 100%;
     scroll-behavior:smooth;
-
+/* font-size: 10px; */
 
 
 }
@@ -144,8 +144,8 @@ transform: translate(-50%,-50%);*/
 
 
 .gv {
-    font-family: gv;
-    font-size: x-large;
+    font-family:'gv';
+    font-size: 3vh;
 }
 
 #tab-bg {
@@ -180,10 +180,20 @@ transform: translate(-50%,-50%);*/
     z-index: 123;
 }
 
+@media(max-width:600px){
+    .gv{
+        font-size: 90%;
+
+    }
+
+
+
+    
+}
 @media(max-width:500px) {
 
-    * {
-        font-size: 78%;
+    .gv{
+        /* font-size: .88rem; */
 
     }
 
@@ -197,11 +207,11 @@ transform: translate(-50%,-50%);*/
 
 }
 
-@media(max-width:400px) {
+@media(max-width:450px) {
 
-    * {
+    .gv{
 
-        font-size: 74%;
+        font-size: 2vh;
 
 
     }
@@ -209,11 +219,11 @@ transform: translate(-50%,-50%);*/
 
 }
 
-@media(max-width:350px) {
+@media(max-width:400px) {
 
-    * {
+    .gv{
 
-        font-size: 66%;
+        font-size: 1.5vh
 
 
     }
@@ -225,8 +235,8 @@ transform: translate(-50%,-50%);*/
 
 @media(max-width:300px) {
 
-    * {
-        font-size: x-small;
+    .gv{
+        /* font-size: x-small; */
     }
 
     #img1 {

@@ -7,16 +7,18 @@
 </head>
 <body>
     
-<form id="myForm" method="post"  enctype="multipart/form-data">
+<form id="myForm">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required><br><br>
     <label for="phone">Phone:</label>
     <input type="text" id="phone" name="phone" required><br><br>
-    <label for="image">Image:</label>
-  
+    <label for="phone">Image:</label>
+    <input type="file" id="img" name="img" accept="image/*"><br><br>  
     <button type="submit">Submit</button>
 </form>
 
+
+<div id="div"></div>
     <script src="../js/databse.js"></script>
 </body>
 </html>

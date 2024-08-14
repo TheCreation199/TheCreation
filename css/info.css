@@ -367,6 +367,7 @@ width: 94%;
 height: 20rem;
 border-radius: 2rem;
 text-align: center;
+overflow: hidden;
 
 }
 
